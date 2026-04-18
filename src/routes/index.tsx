@@ -55,7 +55,7 @@ function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              Transportando o Brasil há 15 anos
+              Especialista em Cargas Fechadas - Full Truck
             </div>
             <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">
               Sua carga no destino,{" "}

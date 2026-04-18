@@ -24,7 +24,7 @@ export const Route = createFileRoute("/contato")({
 
 const channels = [
   { icon: Phone, label: "Telefone", value: "(11) 4002-8922", href: "tel:+551140028922" },
-  { icon: Mail, label: "E-mail", value: "contato@diretacargas.com.br", href: "mailto:contato@diretacargas.com.br" },
+  { icon: Mail, label: "E-mail", value: "comercial@diretacargas.com.br", href: "mailto:comercial@diretacargas.com.br" },
   { icon: MapPin, label: "Endereço", value: "Av. das Indústrias, 1500 — São Paulo/SP" },
   { icon: Clock, label: "Atendimento", value: "Seg a Sex, 8h às 18h" },
 ];

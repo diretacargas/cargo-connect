@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Truck } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo-direta-cargas.png";
 
 const navItems = [
   { to: "/", label: "Início" },
@@ -16,14 +17,13 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-gradient-primary shadow-glow transition-smooth group-hover:scale-110">
-            <Truck className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
-          </div>
-          <span className="font-display text-base sm:text-lg font-bold tracking-tight leading-tight">
-            Direta <span className="text-primary">Cargas</span> Transportes
-          </span>
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link to="/" className="flex items-center group">
+          <img
+            src={logo}
+            alt="Direta Cargas Transportes"
+            className="h-12 sm:h-14 w-auto transition-smooth group-hover:scale-105"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

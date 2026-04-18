@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Truck, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo-direta-cargas.png";
 
 export function SiteFooter() {
   return (
@@ -7,14 +8,11 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-gradient-primary">
-                <Truck className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
-              </div>
-              <span className="font-display text-lg font-bold text-white leading-tight">
-                Direta <span className="text-primary">Cargas</span> Transportes
-              </span>
-            </div>
+            <img
+              src={logo}
+              alt="Direta Cargas Transportes"
+              className="h-16 w-auto"
+            />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60">
               Especialistas em carga fechada (lotação) para todo o Brasil. Transporte sem
               complicação, com eficiência do início ao fim.

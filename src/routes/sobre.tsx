@@ -6,13 +6,13 @@ import aboutFleet from "@/assets/about-fleet.jpg";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre a TransCarga — Nossa História e Valores" },
+      { title: "Sobre a Direta Cargas Transportes — Nossa História" },
       {
         name: "description",
         content:
-          "Conheça a TransCarga: 15 anos transportando o Brasil com segurança, inovação e compromisso com cada cliente.",
+          "Conheça a Direta Cargas Transportes: 15 anos transportando o Brasil com segurança, inovação e compromisso com cada cliente.",
       },
-      { property: "og:title", content: "Sobre Nós — TransCarga" },
+      { property: "og:title", content: "Sobre Nós — Direta Cargas Transportes" },
       {
         property: "og:description",
         content: "15 anos transportando o Brasil com segurança, inovação e compromisso.",
@@ -36,7 +36,7 @@ function AboutPage() {
       <section className="relative bg-brand-black text-white py-24 overflow-hidden">
         <img
           src={aboutFleet}
-          alt="Frota de caminhões TransCarga em centro de distribuição"
+          alt="Frota de caminhões Direta Cargas Transportes em centro de distribuição"
           width={1600}
           height={1024}
           className="absolute inset-0 h-full w-full object-cover opacity-40"
@@ -69,7 +69,7 @@ function AboutPage() {
           </h2>
           <div className="mt-8 space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              A TransCarga nasceu em 2010 com um único caminhão e um propósito claro:
+              A Direta Cargas Transportes nasceu em 2010 com um único caminhão e um propósito claro:
               transportar não apenas mercadorias, mas a confiança de quem entrega seu negócio
               em nossas mãos. Desde então, crescemos junto com nossos clientes.
             </p>

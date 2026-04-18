@@ -20,8 +20,8 @@ export function SiteHeader() {
           <div className="flex h-9 w-9 items-center justify-center rounded-md bg-gradient-primary shadow-glow transition-smooth group-hover:scale-110">
             <Truck className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
           </div>
-          <span className="font-display text-xl font-bold tracking-tight">
-            Trans<span className="text-primary">Carga</span>
+          <span className="font-display text-base sm:text-lg font-bold tracking-tight leading-tight">
+            Direta <span className="text-primary">Cargas</span> Transportes
           </span>
         </Link>
 

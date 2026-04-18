@@ -6,13 +6,13 @@ import { SiteLayout } from "@/components/SiteLayout";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Solicite uma Cotação | TransCarga" },
+      { title: "Contato — Direta Cargas Transportes" },
       {
         name: "description",
         content:
-          "Entre em contato com a TransCarga. Solicite uma cotação personalizada para sua carga ou tire suas dúvidas com nossos especialistas.",
+          "Entre em contato com a Direta Cargas Transportes. Solicite uma cotação personalizada para sua carga ou tire suas dúvidas com nossos especialistas.",
       },
-      { property: "og:title", content: "Contato — TransCarga" },
+      { property: "og:title", content: "Contato — Direta Cargas Transportes" },
       {
         property: "og:description",
         content: "Solicite uma cotação personalizada para sua carga.",
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/contato")({
 
 const channels = [
   { icon: Phone, label: "Telefone", value: "(11) 4002-8922", href: "tel:+551140028922" },
-  { icon: Mail, label: "E-mail", value: "contato@transcarga.com.br", href: "mailto:contato@transcarga.com.br" },
+  { icon: Mail, label: "E-mail", value: "contato@diretacargas.com.br", href: "mailto:contato@diretacargas.com.br" },
   { icon: MapPin, label: "Endereço", value: "Av. das Indústrias, 1500 — São Paulo/SP" },
   { icon: Clock, label: "Atendimento", value: "Seg a Sex, 8h às 18h" },
 ];

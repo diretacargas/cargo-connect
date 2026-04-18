@@ -8,13 +8,13 @@ import heroTruck from "@/assets/hero-truck.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TransCarga — Transporte de Cargas em Todo o Brasil" },
+      { title: "Direta Cargas Transportes — Transporte em Todo o Brasil" },
       {
         name: "description",
         content:
           "Transporte de cargas com segurança, agilidade e tecnologia. Frota moderna, rastreamento em tempo real e cobertura nacional.",
       },
-      { property: "og:title", content: "TransCarga — Transporte de Cargas" },
+      { property: "og:title", content: "Direta Cargas Transportes" },
       {
         property: "og:description",
         content: "Frota moderna, rastreamento em tempo real e cobertura nacional.",
@@ -45,7 +45,7 @@ function HomePage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-brand-black">
         <img
           src={heroTruck}
-          alt="Caminhão TransCarga em estrada ao pôr do sol"
+          alt="Caminhão Direta Cargas Transportes em estrada ao pôr do sol"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover opacity-60"

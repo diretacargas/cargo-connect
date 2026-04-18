@@ -11,8 +11,8 @@ export function SiteFooter() {
               <div className="flex h-9 w-9 items-center justify-center rounded-md bg-gradient-primary">
                 <Truck className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
               </div>
-              <span className="font-display text-xl font-bold text-white">
-                Trans<span className="text-primary">Carga</span>
+              <span className="font-display text-lg font-bold text-white leading-tight">
+                Direta <span className="text-primary">Cargas</span> Transportes
               </span>
             </div>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60">
@@ -40,7 +40,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                <span>contato@transcarga.com.br</span>
+                <span>contato@diretacargas.com.br</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
@@ -51,7 +51,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/40">
-          © {new Date().getFullYear()} TransCarga. Todos os direitos reservados.
+          © {new Date().getFullYear()} Direta Cargas Transportes. Todos os direitos reservados.
         </div>
       </div>
     </footer>

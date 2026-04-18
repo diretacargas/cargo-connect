@@ -6,13 +6,13 @@ import servicesCargo from "@/assets/services-cargo.jpg";
 export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
-      { title: "Serviços de Transporte de Cargas — TransCarga" },
+      { title: "Serviços de Transporte — Direta Cargas Transportes" },
       {
         name: "description",
         content:
           "Carga fracionada, transporte dedicado, refrigerada e armazenagem. Soluções logísticas completas para empresas de todos os portes.",
       },
-      { property: "og:title", content: "Serviços de Transporte — TransCarga" },
+      { property: "og:title", content: "Serviços — Direta Cargas Transportes" },
       {
         property: "og:description",
         content: "Soluções logísticas completas: fracionada, dedicada, refrigerada e armazenagem.",

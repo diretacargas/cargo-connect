@@ -29,9 +29,9 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TransCarga — Transporte de Cargas" },
+      { title: "Direta Cargas Transportes — Transporte de Cargas" },
       { name: "description", content: "Soluções logísticas inteligentes para todo o Brasil." },
-      { name: "author", content: "TransCarga" },
+      { name: "author", content: "Direta Cargas Transportes" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

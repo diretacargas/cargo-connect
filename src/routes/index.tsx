@@ -142,7 +142,7 @@ function HomePage() {
                 Nossos serviços
               </p>
               <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold">
-                Da carga lotação ao transporte dedicado
+                Especialista em Cargas Lotações
               </h2>
               <ul className="mt-8 space-y-4">
                 {[

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Truck, Shield, Clock, MapPin, ArrowRight, CheckCircle2, Package, Zap, Globe2,
+  Truck, Shield, Clock, ArrowRight, CheckCircle2, Radio, Cpu, MapPin,
 } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import heroTruck from "@/assets/hero-truck.jpg";
@@ -8,16 +8,16 @@ import heroTruck from "@/assets/hero-truck.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Direta Cargas Transportes — Transporte em Todo o Brasil" },
+      { title: "Direta Cargas — Transporte de Carga Lotação Nacional" },
       {
         name: "description",
         content:
-          "Transporte de cargas com segurança, agilidade e tecnologia. Frota moderna, rastreamento em tempo real e cobertura nacional.",
+          "Especialistas em carga fechada (lotação) com TAC, trucks e carretas. Seguro de até R$ 1 milhão, monitoramento 24h e cobertura nacional.",
       },
-      { property: "og:title", content: "Direta Cargas Transportes" },
+      { property: "og:title", content: "Direta Cargas — Carga Lotação Nacional" },
       {
         property: "og:description",
-        content: "Frota moderna, rastreamento em tempo real e cobertura nacional.",
+        content: "Carga lotação com seguro, monitoramento e tecnologia em todo o Brasil.",
       },
     ],
   }),
@@ -25,17 +25,17 @@ export const Route = createFileRoute("/")({
 });
 
 const features = [
-  { icon: Shield, title: "100% Seguro", desc: "Cargas seguradas e monitoradas 24/7." },
-  { icon: Clock, title: "Pontualidade", desc: "Entregas no prazo, sempre." },
-  { icon: Globe2, title: "Cobertura Nacional", desc: "Atendemos todos os estados do Brasil." },
-  { icon: Zap, title: "Tecnologia", desc: "Rastreamento em tempo real via app." },
+  { icon: Shield, title: "Seguro até R$ 1 MI", desc: "Cobertura RC-DC, RCT-RC e RC-V com a Sompo Seguros." },
+  { icon: Radio, title: "Monitoramento 24h", desc: "Gerenciamento de riscos pela Vérttice com bloqueio remoto." },
+  { icon: MapPin, title: "Atuação Nacional", desc: "TAC, trucks e carretas em todo o território brasileiro." },
+  { icon: Cpu, title: "Tecnologia Integrada", desc: "Emissão ágil de CTE, MDF-e e integração de sistemas." },
 ];
 
-const stats = [
-  { value: "15+", label: "Anos de mercado" },
-  { value: "500+", label: "Veículos na frota" },
-  { value: "98%", label: "Entregas no prazo" },
-  { value: "27", label: "Estados atendidos" },
+const highlights = [
+  { value: "R$ 1 MI", label: "Cobertura securitária" },
+  { value: "Nacional", label: "Cobertura de atuação" },
+  { value: "Lotação", label: "Carga fechada (FTL)" },
+  { value: "24h", label: "Monitoramento" },
 ];
 
 function HomePage() {
@@ -45,7 +45,7 @@ function HomePage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-brand-black">
         <img
           src={heroTruck}
-          alt="Caminhão Direta Cargas Transportes em estrada ao pôr do sol"
+          alt="Caminhão Direta Cargas em estrada ao pôr do sol"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover opacity-60"
@@ -55,15 +55,15 @@ function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              Especialista em Cargas Fechadas - Full Truck
+              Especialistas em Carga Fechada — Full Truck
             </div>
             <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">
-              Sua carga no destino,{" "}
-              <span className="text-primary">no tempo certo.</span>
+              Transporte sem complicação,{" "}
+              <span className="text-primary">com eficiência do início ao fim.</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
-              Soluções logísticas inteligentes para empresas que não podem parar.
-              Frota moderna, rastreamento em tempo real e atendimento dedicado.
+              Soluções completas em carga lotação para todo o Brasil. Atendimento direto,
+              transparente e confiável — porque cada carga é importante para o seu negócio.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -84,13 +84,13 @@ function HomePage() {
         </div>
       </section>
 
-      {/* STATS */}
+      {/* HIGHLIGHTS */}
       <section className="border-y border-border bg-brand-black text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((s) => (
+            {highlights.map((s) => (
               <div key={s.label} className="text-center">
-                <div className="font-display text-4xl sm:text-5xl font-bold text-primary">
+                <div className="font-display text-3xl sm:text-4xl font-bold text-primary">
                   {s.value}
                 </div>
                 <div className="mt-2 text-sm text-white/60">{s.label}</div>
@@ -105,14 +105,14 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-              Por que escolher
+              Por que escolher a Direta Cargas
             </p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold">
-              Logística que move seu negócio
+              Segurança, tecnologia e compromisso
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Combinamos experiência, tecnologia e uma equipe dedicada para entregar
-              resultados que você pode contar.
+              Reunimos os melhores parceiros do setor para entregar tranquilidade
+              e previsibilidade em cada operação.
             </p>
           </div>
 
@@ -142,14 +142,14 @@ function HomePage() {
                 Nossos serviços
               </p>
               <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold">
-                Especialista em Cargas Lotações
+                Carga lotação em todo o Brasil
               </h2>
               <ul className="mt-8 space-y-4">
                 {[
-                  "Carga lotação para todo o Brasil",
-                  "Transporte dedicado com exclusividade",
-                  "Logística especializada e cargas refrigeradas",
-                  "Armazenagem e gestão de estoque",
+                  "Carga fechada (FTL) com TAC, trucks e carretas",
+                  "Seguro RC-DC, RCT-RC e RC-V de até R$ 1 milhão",
+                  "Gerenciamento de riscos com bloqueio remoto",
+                  "Tecnologia Bsoft: CTE, MDF-e e integração",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-0.5" />
@@ -166,10 +166,10 @@ function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Truck, label: "Rodoviário" },
-                { icon: Package, label: "Lotação" },
-                { icon: MapPin, label: "Dedicado" },
-                { icon: Shield, label: "Especializado" },
+                { icon: Truck, label: "Lotação" },
+                { icon: Shield, label: "Seguro" },
+                { icon: Radio, label: "Monitoramento" },
+                { icon: Clock, label: "Pontualidade" },
               ].map((s) => (
                 <div
                   key={s.label}

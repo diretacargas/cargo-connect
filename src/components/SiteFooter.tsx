@@ -11,7 +11,7 @@ export function SiteFooter() {
             <img
               src={logo}
               alt="Direta Cargas Transportes"
-              className="h-16 w-auto"
+              className="h-24 w-auto"
             />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60">
               Especialistas em carga fechada (lotação) para todo o Brasil. Transporte sem

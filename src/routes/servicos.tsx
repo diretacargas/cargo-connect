@@ -10,12 +10,12 @@ export const Route = createFileRoute("/servicos")({
       {
         name: "description",
         content:
-          "Carga fracionada, transporte dedicado, refrigerada e armazenagem. Soluções logísticas completas para empresas de todos os portes.",
+          "Carga lotação, transporte dedicado, refrigerada e armazenagem. Soluções logísticas completas para empresas de todos os portes.",
       },
       { property: "og:title", content: "Serviços — Direta Cargas Transportes" },
       {
         property: "og:description",
-        content: "Soluções logísticas completas: fracionada, dedicada, refrigerada e armazenagem.",
+        content: "Soluções logísticas completas: lotação, dedicada, refrigerada e armazenagem.",
       },
     ],
   }),
@@ -31,7 +31,7 @@ const services = [
   },
   {
     icon: Package,
-    title: "Carga Fracionada",
+    title: "Carga Lotação",
     desc: "Compartilhe espaço e reduza custos sem abrir mão da agilidade na entrega.",
     items: ["Coletas diárias", "Consolidação inteligente", "Custo otimizado"],
   },

@@ -142,11 +142,11 @@ function HomePage() {
                 Nossos serviços
               </p>
               <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold">
-                Da carga fracionada ao transporte dedicado
+                Da carga lotação ao transporte dedicado
               </h2>
               <ul className="mt-8 space-y-4">
                 {[
-                  "Carga fracionada para todo o Brasil",
+                  "Carga lotação para todo o Brasil",
                   "Transporte dedicado com exclusividade",
                   "Logística especializada e cargas refrigeradas",
                   "Armazenagem e gestão de estoque",
@@ -167,7 +167,7 @@ function HomePage() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: Truck, label: "Rodoviário" },
-                { icon: Package, label: "Fracionada" },
+                { icon: Package, label: "Lotação" },
                 { icon: MapPin, label: "Dedicado" },
                 { icon: Shield, label: "Especializado" },
               ].map((s) => (

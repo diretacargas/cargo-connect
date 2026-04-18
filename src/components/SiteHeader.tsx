@@ -17,12 +17,13 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-28 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center group">
           <img
             src={logo}
             alt="Direta Cargas Transportes"
-            className="h-12 sm:h-14 w-auto transition-smooth group-hover:scale-105"
+            className="h-18 sm:h-21 w-auto transition-smooth group-hover:scale-105"
+            style={{ height: "5.25rem" }}
           />
         </Link>
 

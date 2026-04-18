@@ -16,8 +16,8 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60">
-              Soluções completas em transporte de cargas para todo o Brasil. Pontualidade,
-              segurança e tecnologia em cada entrega.
+              Especialistas em carga fechada (lotação) para todo o Brasil. Transporte sem
+              complicação, com eficiência do início ao fim.
             </p>
           </div>
 
@@ -27,6 +27,7 @@ export function SiteFooter() {
               <li><Link to="/" className="hover:text-primary transition-smooth">Início</Link></li>
               <li><Link to="/servicos" className="hover:text-primary transition-smooth">Serviços</Link></li>
               <li><Link to="/sobre" className="hover:text-primary transition-smooth">Sobre</Link></li>
+              <li><Link to="/parceiros" className="hover:text-primary transition-smooth">Parceiros</Link></li>
               <li><Link to="/contato" className="hover:text-primary transition-smooth">Contato</Link></li>
             </ul>
           </div>
@@ -36,7 +37,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                <span>(11) 4002-8922</span>
+                <span>(11) 95490-4631</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />

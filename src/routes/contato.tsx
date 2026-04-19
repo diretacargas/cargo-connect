@@ -31,12 +31,44 @@ const channels = [
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
-    (e.target as HTMLFormElement).reset();
-    setTimeout(() => setSent(false), 5000);
+    setError(null);
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      nome: String(fd.get("nome") || ""),
+      empresa: String(fd.get("empresa") || ""),
+      email: String(fd.get("email") || ""),
+      telefone: String(fd.get("telefone") || ""),
+      origem: String(fd.get("origem") || ""),
+      destino: String(fd.get("destino") || ""),
+      mensagem: String(fd.get("mensagem") || ""),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body?.error || "Erro ao enviar a solicitação");
+      }
+      setSent(true);
+      form.reset();
+      setTimeout(() => setSent(false), 6000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Erro inesperado");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -131,16 +163,23 @@ function ContactPage() {
 
                 <button
                   type="submit"
-                  className="mt-6 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:scale-[1.02]"
+                  disabled={loading}
+                  className="mt-6 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   <Send className="h-4 w-4" />
-                  Enviar solicitação
+                  {loading ? "Enviando..." : "Enviar solicitação"}
                 </button>
 
                 {sent && (
                   <div className="mt-4 flex items-center gap-2 rounded-md bg-primary/10 border border-primary/30 p-4 text-sm text-primary">
                     <CheckCircle2 className="h-5 w-5 shrink-0" />
                     <span>Solicitação enviada! Entraremos em contato em breve.</span>
+                  </div>
+                )}
+
+                {error && (
+                  <div className="mt-4 rounded-md bg-destructive/10 border border-destructive/30 p-4 text-sm text-destructive">
+                    {error}
                   </div>
                 )}
               </form>

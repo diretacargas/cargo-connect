@@ -31,12 +31,44 @@ const channels = [
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
-    (e.target as HTMLFormElement).reset();
-    setTimeout(() => setSent(false), 5000);
+    setError(null);
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      nome: String(fd.get("nome") || ""),
+      empresa: String(fd.get("empresa") || ""),
+      email: String(fd.get("email") || ""),
+      telefone: String(fd.get("telefone") || ""),
+      origem: String(fd.get("origem") || ""),
+      destino: String(fd.get("destino") || ""),
+      mensagem: String(fd.get("mensagem") || ""),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body?.error || "Erro ao enviar a solicitação");
+      }
+      setSent(true);
+      form.reset();
+      setTimeout(() => setSent(false), 6000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Erro inesperado");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (

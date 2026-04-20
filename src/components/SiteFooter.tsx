@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo-direta-cargas.png";
+import logo from "@/assets/logo-direta-cargas-footer.png";
 
 export function SiteFooter() {
   return (

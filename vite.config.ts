@@ -1,9 +1,20 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
-//   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, cloudflare (build-only),
-//     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
-//     error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... } }) if needed.
+// @lovable.dev/vite-tanstack-config já inclui:
+//   tanstackStart, viteReact, tailwindcss, tsConfigPaths, cloudflare (apenas em build),
+//   componentTagger (dev), injeção de VITE_*, alias @, dedupe de React/TanStack,
+//   plugins de error logging e detecção de sandbox.
+//
+// Para hospedar no VPS (Contabo) com Node.js + PM2 desativamos o adapter Cloudflare
+// definindo a variável LOVABLE_TARGET=node no momento do build.
+// No ambiente Lovable (preview/sandbox) a variável NÃO é definida, então o build
+// continua usando o adapter Cloudflare normalmente.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-export default defineConfig();
+const isNodeTarget = process.env.LOVABLE_TARGET === "node";
+
+export default defineConfig({
+  tanstack: {
+    start: {
+      target: isNodeTarget ? "node-server" : undefined,
+    },
+  },
+});

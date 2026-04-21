@@ -52,7 +52,10 @@ function ContactPage() {
     };
 
     try {
-      const res = await fetch("/api/contact", {
+      // Em produção (VPS), o /api/contact é servido pelo backend Node em backend-contact/server.mjs
+      // (veja DEPLOY-CONTABO.md). Pode rodar no mesmo domínio via proxy Nginx ou em outro host.
+      const apiBase = import.meta.env.VITE_API_URL || "";
+      const res = await fetch(`${apiBase}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

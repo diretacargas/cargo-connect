@@ -14,7 +14,6 @@ import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as ParceirosRouteImport } from './routes/parceiros'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ApiContactRouteImport } from './routes/api/contact'
 
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
@@ -41,11 +40,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiContactRoute = ApiContactRouteImport.update({
-  id: '/api/contact',
-  path: '/api/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -53,7 +47,6 @@ export interface FileRoutesByFullPath {
   '/parceiros': typeof ParceirosRoute
   '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
-  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +54,6 @@ export interface FileRoutesByTo {
   '/parceiros': typeof ParceirosRoute
   '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
-  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,27 +62,13 @@ export interface FileRoutesById {
   '/parceiros': typeof ParceirosRoute
   '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
-  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/contato'
-    | '/parceiros'
-    | '/servicos'
-    | '/sobre'
-    | '/api/contact'
+  fullPaths: '/' | '/contato' | '/parceiros' | '/servicos' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contato' | '/parceiros' | '/servicos' | '/sobre' | '/api/contact'
-  id:
-    | '__root__'
-    | '/'
-    | '/contato'
-    | '/parceiros'
-    | '/servicos'
-    | '/sobre'
-    | '/api/contact'
+  to: '/' | '/contato' | '/parceiros' | '/servicos' | '/sobre'
+  id: '__root__' | '/' | '/contato' | '/parceiros' | '/servicos' | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -99,7 +77,6 @@ export interface RootRouteChildren {
   ParceirosRoute: typeof ParceirosRoute
   ServicosRoute: typeof ServicosRoute
   SobreRoute: typeof SobreRoute
-  ApiContactRoute: typeof ApiContactRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -139,13 +116,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/contact': {
-      id: '/api/contact'
-      path: '/api/contact'
-      fullPath: '/api/contact'
-      preLoaderRoute: typeof ApiContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -155,7 +125,6 @@ const rootRouteChildren: RootRouteChildren = {
   ParceirosRoute: ParceirosRoute,
   ServicosRoute: ServicosRoute,
   SobreRoute: SobreRoute,
-  ApiContactRoute: ApiContactRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

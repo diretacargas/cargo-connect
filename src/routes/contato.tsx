@@ -23,7 +23,7 @@ export const Route = createFileRoute("/contato")({
 });
 
 const channels = [
-  { icon: Phone, label: "Telefone / WhatsApp", value: "(11) 95490-4631", href: "tel:+5511954904631" },
+  { icon: Phone, label: "Telefone / WhatsApp", value: "(11) 5446-0648", href: "tel:+551154460648" },
   { icon: Mail, label: "E-mail", value: "comercial@diretacargas.com.br", href: "mailto:comercial@diretacargas.com.br" },
   { icon: MapPin, label: "Atuação", value: "Todo o território nacional" },
   { icon: Clock, label: "Atendimento", value: "Seg a Sex, 8h às 18h" },

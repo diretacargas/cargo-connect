@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "551154460648"; // formato internacional, sem +
+const WHATSAPP_NUMBER = "551154410648"; // formato internacional, sem +
 const MESSAGE = "Olá! Gostaria de solicitar uma cotação de transporte.";
 
 export function WhatsAppButton() {

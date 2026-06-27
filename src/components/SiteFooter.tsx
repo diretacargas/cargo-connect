@@ -63,6 +63,17 @@ export function SiteFooter() {
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <span>São Paulo — SP</span>
               </li>
+              <li className="flex items-start gap-2">
+                <InstagramIcon className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+                <a
+                  href="https://www.instagram.com/diretacargas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-smooth"
+                >
+                  @diretacargas
+                </a>
+              </li>
             </ul>
           </div>
         </div>

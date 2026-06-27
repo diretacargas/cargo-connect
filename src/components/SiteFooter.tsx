@@ -2,6 +2,24 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/logo-direta-cargas-footer.png";
 
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
 export function SiteFooter() {
   return (
     <footer className="bg-brand-black text-white/80 mt-20">
@@ -44,6 +62,17 @@ export function SiteFooter() {
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <span>São Paulo — SP</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <InstagramIcon className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+                <a
+                  href="https://www.instagram.com/diretacargas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-smooth"
+                >
+                  @diretacargas
+                </a>
               </li>
             </ul>
           </div>
